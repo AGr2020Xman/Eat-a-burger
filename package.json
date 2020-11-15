@@ -1,0 +1,29 @@
+{
+  "name": "eat-a-burger-app",
+  "version": "1.0.0",
+  "description": "A burger detailing and consumption application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AGr2020Xman/Eat-a-burger.git"
+  },
+  "keywords": [
+    "handlebars",
+    "express",
+    "heroku"
+  ],
+  "author": "Andre Grech",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AGr2020Xman/Eat-a-burger/issues"
+  },
+  "homepage": "https://github.com/AGr2020Xman/Eat-a-burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.1"
+  }
+}
