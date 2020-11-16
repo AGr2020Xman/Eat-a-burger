@@ -12,7 +12,7 @@ const burger = {
       callback(res);
     });
   },
-  updateOne: (objColVals, condition, callback) => {
+  updateOne: (objColvalues, condition, callback) => {
     orm.updateOne("burgers", objColVals, condition, (res) => {
       callback(res);
     });
@@ -24,5 +24,5 @@ const burger = {
   }
 };
 
-// Export the database functions for the controller (catsController.js).
+// Export the database functions for the controller
 module.exports = burger;
