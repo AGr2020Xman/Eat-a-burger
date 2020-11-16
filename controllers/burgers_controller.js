@@ -3,7 +3,8 @@ const burger = require('../models/burger');
 
 const router = express.Router();
 
-// Create all our routes and set up logic within those routes where required.
+// CRUD
+// creating all routes
 router.get("/", (req, res) => {
   burger.selectAll((data) => {
     const hbsObject = {
@@ -18,14 +19,16 @@ router.get("/", (req, res) => {
 router.post("/api/burgers", (req, res) => {
   burger.insertOne(
       ["burger_name", "devoured"], 
-      [req.body.name, req.body.devoured], (result) => {
-    // Send back the ID of the new quote
+      [req.body.name, req.body.devoured],
+      (result) => {
+        console.log(result);
+    // Send back the ID of the new burger
     res.json({ id: result.insertId });
   });
 });
 
 router.put("/api/burgers/:id", (req, res) => {
-  const condition = "id = " + req.params.id;
+  const condition = `id = + ${req.params.id}`;
 
   console.log("condition", condition);
 
@@ -43,7 +46,8 @@ router.put("/api/burgers/:id", (req, res) => {
 });
 
 router.delete("/api/burgers/:id", (req, res) => {
-  const condition = "id = " + req.params.id;
+  console.log(req.params);
+  const condition = `id = + ${req.params.id}`;
 
   burger.delete(condition, (result) => {
     if (result.affectedRows == 0) {
