@@ -46,7 +46,6 @@ router.put("/api/burgers/:id", (req, res) => {
 });
 
 router.delete("/api/burgers/:id", (req, res) => {
-  console.log(req.params);
   const condition = `id = + ${req.params.id}`;
 
   burger.delete(condition, (result) => {
