@@ -2,6 +2,10 @@ html * {
     font-family: Roboto, sans-serif !important;
 }
 
+body {
+    background-color: #450101; 
+}
+
 .heading {
     text-align: center;
     font-weight: bold;
@@ -11,19 +15,36 @@ html * {
 .subhead {
     text-align: center;
     font-weight: bold;
-    background-color: ;
+    background-color: #32c704;
+}
+
+.h2 > .subhead {
+    border-radius: 25px;
 }
 
 #burger-cartoon {
     max-height: 300px;
     margin-bottom: 5px; 
-};
+}
 
-.cheese {
+#label-text {
+    font-weight: bold;
+}
+
+.jumbotron.cheese {
     background-color: tomato;
     padding-top: 25px;
     padding-bottom: 10px;
-    color: tomato;
+    color: whitesmoke;
+}
+
+.main-body {
+    background-color: #e5cb7a;
+}
+
+.list-body {
+    background-color: #eec13a;
+    border: black 1 dashed;
 }
 
 .btn {
@@ -31,18 +52,24 @@ html * {
     white-space:normal;
     color: whitesmoke;
     font-family: 'Roboto', sans-serif;
-};
+}
 
 .add-burger {
-    margin-top: 50px;
-};
+    margin-top: 20px;
+}
 
 .is-devoured {
     text-align: center;
-};
+}
 
 .burger-types {
     font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    .devoured-burger {
+        margin-top: 10px;
+    }
 }
 
 /* @media (max-width: 12450px) {
