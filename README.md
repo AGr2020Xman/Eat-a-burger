@@ -4,6 +4,8 @@
 
 ## Description
 
+This burger eating app
+
 ## Contents
 
 - [Installation](#installation)
@@ -18,17 +20,50 @@
 
 ## Installation
 
+1. Clone the GitHub repository
+
+```
+git clone https://github.com/AGr2020Xman/Eat-a-burger.git
+```
+
+2. Install all dependent npm packages
+
+```
+npm install --save
+```
+
+3. Update the config/connection.js file with updated MySQL connection paramets for a local connection.
+
 ## Usage
+
+Run <addr>npm start</addr> and use your browser to open [http://localhost:7001](http://localhost:7001).
 
 ## User Story
 
 ```
+AS A foodie,
+I WANT TO record burgers I want to eat,
+SO THAT I can gamify the consumption of them!
 
 ```
 
 ## Demonstration
 
+- [Deployed application on heroku](https://thawing-gorge-00712.herokuapp.com/)
+
 ## Screenshots
+
+_The burger themed food eating app_
+
+- ![](./public/assets/images/burgertheme.JPG)
+
+_You can eat, reorder and delete burgers_
+
+- ![](/public/assets/images/deletedevourorder.JPG)
+
+_You can also add new burgers to your list!_
+
+- ![](/public/assets/images/addnew.JPG)
 
 ## Questions
 
