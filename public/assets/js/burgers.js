@@ -4,7 +4,6 @@ $(() => {
   
       let newBurger = {
         name: $("#burger-name").val().trim(),
-        devoured: 0, //not devoured
       };
   
       // POST req
@@ -20,12 +19,10 @@ $(() => {
   
     // devoured/not devoured toggle
     $(".is-devoured").on("click", (event) => {
-      let id = $(this).data("id");
-      let newDevoured = $(this).data("newdevoured");
+      let id = $(event.currentTarget).data("id");
+      let newDevoured = $(event.currentTarget).data("newdevoured");
   
-      let newDevouredState = {
-        devoured: newDevoured,
-      };
+      let newDevouredState = { devoured: newDevoured, };
   
       // PUT req
       $.ajax(`/api/burgers/${id}`, {
@@ -38,7 +35,7 @@ $(() => {
     });
   
     $(".delete-burger").on("click", (event) => {
-      let id = $(this).data("id");
+      let id = $(event.currentTarget).data("id");
   
       // DEL req
       $.ajax(`/api/burgers/${id}`, {
