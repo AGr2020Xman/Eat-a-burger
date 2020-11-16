@@ -1,32 +1,48 @@
-<h1>Burgers everywhere!</h1>
-
-<h2>Burgers waiting to be devoured!</h2>
-
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{> options-block devoured=true}}
-    {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>Burgers that have been devoured!</h2>
-
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> options-block devoured=false}}
-    {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Add any burger</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="burger-name">Burger Name:</label>
-        <input type="text" id="burger-name" name="name" placeholder="Enter a burger name...">
+<div class="container cheese jumbotron">
+    <div class="container text-center">
+        <img src="/assets/images/burgercartoon.png" class="img-fluid" id="burger-cartoon" alt="Responsive image">
+        <h1 class="heading">Burgers everywhere!</h1>
     </div>
+</div>
+<div class="container-md">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="container col-md-5">
+            <h2 class="row subhead">Burgers waiting to be devoured!</h2>
+            <ul class="row list-group">
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> options-block devoured=true}}
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="container col-md-5">
+            <h2 class=" row subhead">Burgers that have been devoured!</h2>
+            <ul class="row list-group">
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> options-block devoured=false}}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="row add-burger">
+        <div class="col-md-2"></div>
+        <form class="col-md-8 create-form text-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="subhead">Add a Burger</h2>
+                </div>
+            </div>
+            <div class="form-group">
+                <label id='label-text' for="burger-name">Burger Name:</label>
+                <input type="text" id="burger-name" name="name" placeholder="Enter a burger name...">
+                <button class="submit-btn text-wrap btn btn-primary responsive-width" type="submit">Add
+                    Burger</button>
+            </div>
+        </form>
 
-    <button class="submit-btn" type="submit">Add Burger</button>
-</form>
+    </div>
+</div>

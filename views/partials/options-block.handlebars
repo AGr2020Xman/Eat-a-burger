@@ -1,9 +1,16 @@
-<li>
-    {{burger_name}}
-
-    <button type="button" class="is-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
-        {{#if devoured}}Devour this burger!{{else}}Order this burger!{{/if}}
-    </button>
-
-    <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+<li class="list-group-item">
+    <div class="row">
+        <div class="burger-types col-md-6 text-center align-middle">
+            {{burger_name}}
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <button type="button" class="btn btn-primary is-devoured col-md-6 text-wrap responsive-width"
+                    data-id="{{id}}" data-newdevoured="{{devoured}}"><i>
+                    </i>{{#if devoured}}Devour this burger!{{else}}Order this burger!{{/if}}</button>
+                <button class="btn btn-danger delete-burger col-md-6 text-wrap responsive-width"
+                    data-id="{{this.id}}"><i></i>DELETE!</button>
+            </div>
+        </div>
+    </div>
 </li>
