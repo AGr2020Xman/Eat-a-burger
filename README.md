@@ -4,7 +4,9 @@
 
 ## Description
 
-This burger eating app
+This burger eating app was designed with a MySQL database connection in mind. It utilises CRUD functionality and an orm system to manage the functionality. You can add whatever burger (or other food if you like) to the list to be devoured by you later.
+
+This is just a fun way to test the use of orm, and to persist data using MySQL. It has been hosted on Heroku and utilises a connection with JAWSDB as a cloud based database fill-in.
 
 ## Contents
 
